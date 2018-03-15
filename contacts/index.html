@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TaskList</title>
+
+    <!-- Styles -->
+    <link href="assets/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="app">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"
+                        class="navbar-toggle collapsed">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../admin.html" class="navbar-brand">
+                    TaskList
+                </a>
+            </div>
+            <div id="app-navbar-collapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    &nbsp;
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                           aria-haspopup="true">
+                            admin <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html">
+                                Logout
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>Task list</h2>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table table-hover table-condensed ">
+                            <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Creation date</th>
+                                <th class="text-right">
+                                    <a href="create.html" class="btn btn-success btn-sm">
+                                        Create
+                                    </a>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Simple task</td>
+                                <td>13-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor.</td>
+                                <td>13-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tenetur quod quidem in voluptatem</td>
+                                <td>14-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>12-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>11-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>10-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Eligendi non quis exercitationem culpa</td>
+                                <td>09-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>08-03-2018 17:00:00</td>
+                                <td class="text-right">
+                                    <a href="edit.html" class="btn btn-primary btn-sm"> Edit </a>
+                                    <a onclick="if(confirm('Удалить?')){ window.location='delete.html' }" class="btn btn-danger btn-sm"> Delete </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li class="disabled"><span>«</span></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#" rel="next">»</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="assets/app.js"></script>
+
+
+</body>
+</html>
