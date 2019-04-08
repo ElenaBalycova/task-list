@@ -4,33 +4,34 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h2>Task list</h2>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <table class="table table-hover table-condensed ">
+                        <h2>Список задач
+                            <a href="{{route('admin.tasks.create')}}" class="btn btn-success btn-sm">
+                                Добавить задачу
+                            </a>
+                        </h2>
+                        <table class="table table-hover table-condensed table-bordered ">
                             <thead>
                             <tr>
-                                <th>Task</th>
-                                <th>Creation date</th>
-                                <th class="text-right">
-                                    <a href="{{route('admin.tasks.create')}}" class="btn btn-success btn-sm">
-                                        Create
-                                    </a>
-                                </th>
+                                <th>#</th>
+                                <th>Название</th>
+                                <th>Приоритет</th>
+                                <th>Действия</th>
                             </tr>
                             </thead>
                             <tbody>
                             @forelse ($tasks as $task)
                             <tr>
+                                <td>{{$task->id}}</td>
                                 <td>{{$task->task}}</td>
                                 <td>{{$task->created_at}}</td>
                                 <td class="text-right">
                                     <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.tasks.destroy', $task->id)}}" method="post">
-
                                         <input type="hidden" name="_method" value="delete">
                                         {{ csrf_field() }}
-                                        <a href="{{route('admin.tasks.edit', $task->id)}}" class="btn btn-primary btn-sm"> Edit </a>
-                                        <button type="submit" class="btn btn-danger btn-sm"> Delete </button>
+                                        <a href="{{route('admin.tasks.edit', $task->id)}}" class="btn btn-outline-primary btn-sm"> Edit </a>
+                                        <button type="submit" class="btn btn-outline-danger btn-sm"> Delete </button>
                                     </form>
                                 </td>
                             </tr>

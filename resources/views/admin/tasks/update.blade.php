@@ -7,9 +7,10 @@
                 <form action="{{route('admin.tasks.update', $tasks)}}" method="post" class="form-horizontal">
                     <input type="hidden" name="_method" value="put">
                     {{ csrf_field() }}
-                    <label for="task"><h2>Edit task</h2></label>
+                    <label for="task"><h2>Редактирование задачи</h2></label>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                            <label for="task"><h3>Название задачи</h3></label>
                             <input type="text" name="task" id="task" value="{{$tasks->task}}" class="form-control">
                             <input type="hidden" name="user_id" value="{{$tasks->user_id or ""}}">
                         </div>
